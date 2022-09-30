@@ -1,34 +1,56 @@
-import waldo from './img/waldo.jpg'
+import wally from './img/wally.jpg'
 import styled from 'styled-components'
-import { useState } from 'react'
+import React from 'react'
 
-const WaldoContainer = styled.div`
-    width: 110px;
-    height: 110px;
-    background-color: blue;
+
+
+const WallyContainer = styled.div`
+    width: 50px;
+    height: 50px;
+    /* background-color: rgb(0, 0, 255); */
     display: flex;
     justify-content: flex-end;
-    /* padding: 250px; */
+    position: relative;
+    top: 250px;
+    left: 730px;
 
 `
 
-const WaldoImg = styled.img`
-    width: 100px;
-    height: 100px;
+const WallyImg = styled.img`
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
-function RenderImg() {
+class RenderImg extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.handleShowImage = this.handleShowImage.bind(this);
+        this.state = false;
+      }
+
+      handleShowImage(){
+        this.setState({
+            show: true,
+            
+          })
+      }
+
+      render(){
+
+          return (
+              <WallyContainer onMouseEnter={this.handleShowImage}>
+                  {this.state.show === true &&            
+                  <WallyImg src={wally}></WallyImg>
+                  }
+              </WallyContainer>
+          )
+      }
     
-    const [img, setImg] = useState(false)
-
-    
-
-
-    return (
-        <WaldoContainer>
-            <WaldoImg src={waldo}></WaldoImg>
-        </WaldoContainer>
-    )
 }
+
 
 export default RenderImg

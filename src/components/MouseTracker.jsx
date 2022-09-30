@@ -14,7 +14,7 @@ class MouseTracker extends React.Component {
     constructor(props) {
       super(props);
       this.handleMouseMove = this.handleMouseMove.bind(this);
-      this.state = { x: 0, y: 0 };
+      this.state = { x: 0, y: 0};
     }
   
     handleMouseMove(event) {
@@ -27,7 +27,7 @@ class MouseTracker extends React.Component {
     render() {
       return (
         <StyleDiv onMouseMove={this.handleMouseMove}>
-          <h1>Mova o mouse por aí!</h1>
+          <h1>Mova o mouse por aí e procure o Wally!</h1>
           {this.props.render(this.state)}
           {this.props.img(this.state)}
         </StyleDiv>
