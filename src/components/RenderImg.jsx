@@ -2,17 +2,25 @@ import wally from './img/wally.jpg'
 import styled from 'styled-components'
 import React from 'react'
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 
+    
+}
 
 const WallyContainer = styled.div`
-    width: 50px;
-    height: 50px;
-    /* background-color: rgb(0, 0, 255); */
+    width: 550px;
+    height: 550px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 0, 255); */
     position: relative;
-    top: 250px;
-    left: 730px;
+    top: ${getRandomInt(-250, 420)}px;
+    right: ${getRandomInt(-650, 650)}px;
+    
+    
 
 `
 
@@ -29,25 +37,33 @@ class RenderImg extends React.Component {
     constructor(props) {
         super(props);
         this.handleShowImage = this.handleShowImage.bind(this);
-        this.state = false;
+        this.state = {show: false, M1: String};
       }
 
       handleShowImage(){
         this.setState({
             show: true,
+            M1: 'Teste'
             
           })
-      }
+
+        }
+      
 
       render(){
 
-          return (
-              <WallyContainer onMouseEnter={this.handleShowImage}>
-                  {this.state.show === true &&            
-                  <WallyImg src={wally}></WallyImg>
-                  }
-              </WallyContainer>
-          )
+        return (
+            <WallyContainer onMouseEnter={this.handleShowImage.M1} >
+                <div style={{width: '350px', height: '350px', /*backgroundColor: 'yellow',*/ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <div style={{ width: '150px', height: '150px', /* display: 'flex',*/ alignItems: 'center', justifyContent: 'center'}} onMouseEnter={this.handleShowImage}>
+                        {this.state.show === true &&            
+                        <WallyImg src={wally}></WallyImg>
+                        }
+
+                    </div>
+                </div>
+            </WallyContainer>
+        )
       }
     
 }
