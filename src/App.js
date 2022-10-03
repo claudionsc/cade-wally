@@ -10,8 +10,9 @@ function App() {
   return (
     <div className="App">
       <MouseTracker render = {(mouse) => <RenderText mouse={mouse} /> } 
-      img = {() => <RenderImg  render ={(msg) => <RenderDicas msg={msg} /> } /> }
+      img = {() => <RenderImg  /> }
       />
+      <RenderDicas />
       
     </div>
   );

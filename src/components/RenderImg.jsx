@@ -49,7 +49,7 @@ class RenderImg extends React.Component {
             um: messages.message1
             })
 
-          alert(this.state.message.message)
+        //   alert(this.state.message.message)
 
         }
       
