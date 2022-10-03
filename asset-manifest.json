@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cade-wally/static/css/main.13d79ed9.css",
+    "main.js": "/cade-wally/static/js/main.f244732a.js",
+    "static/media/wally.jpg": "/cade-wally/static/media/wally.864cd0b2e81d0309f2bf.jpg",
+    "index.html": "/cade-wally/index.html",
+    "main.13d79ed9.css.map": "/cade-wally/static/css/main.13d79ed9.css.map",
+    "main.f244732a.js.map": "/cade-wally/static/js/main.f244732a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13d79ed9.css",
+    "static/js/main.f244732a.js"
+  ]
+}
