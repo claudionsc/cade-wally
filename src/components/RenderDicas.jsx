@@ -1,6 +1,6 @@
 export default function RenderDicas({dicas}) {
     return(
-        <>
+        <div style={{ marginTop: '80px', backgroundColor: 'red' }}>
         {dicas.showMsg1 === true && dicas.show === false &&
         <p style={{ position: 'fixed', top: '260px', right: '720px', zIndex: '1', marginTop: '150px', color: 'orangered'}}>           
            Tá esquentando...
@@ -16,6 +16,6 @@ export default function RenderDicas({dicas}) {
             ACHOU! Recarregue para jogar de novo
         </p>
         }
-        </>
+        </div>
     )
 }

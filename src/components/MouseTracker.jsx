@@ -8,6 +8,7 @@ const StyleDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 `
 
 class MouseTracker extends React.Component {
@@ -27,7 +28,7 @@ class MouseTracker extends React.Component {
     render() {
       return (
         <StyleDiv onMouseMove={this.handleMouseMove}>
-          <h1 style={{ position: 'fixed', zIndex: '1'}}>Mova o mouse por aí e procure o Wally!</h1>
+          <h1 style={{ position: 'fixed', zIndex: '1', margin: '20px'}}>Mova o mouse ou clique por aí e procure o Wally!</h1>
           {this.props.render(this.state)}
           {this.props.img(this.state)}
           
