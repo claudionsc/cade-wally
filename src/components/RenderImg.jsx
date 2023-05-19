@@ -1,7 +1,6 @@
-import wally from './img/wally.jpg'
+import wally from './assets/img/wally.jpg'
 import styled from 'styled-components'
 import React from 'react'
-// import * as messages from './mensagens'
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -16,7 +15,6 @@ const WallyContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rgb(0, 0, 255); */
     position: relative;
     top: ${getRandomInt(-250, 420)}px;
     right: ${getRandomInt(-650, 650)}px;
